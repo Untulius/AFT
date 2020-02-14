@@ -18,6 +18,8 @@ public class DescriptionOfNumber {
                     else System.out.println("положительное");
         }
 
+        scanner.close();
+
     }
 
 

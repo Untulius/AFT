@@ -16,6 +16,8 @@ public class Minimal {
 
         if (min(a, b)==0) System.out.println("Числа равны");
             else System.out.println("Минимальное число равно " + min(a, b));
+
+        scanner.close();
     }
 
     public static int min(int a, int b){
