@@ -1,5 +1,9 @@
 package Lesson1;
-
+/*
+2. Написать программу, которая описывает введенное число.
+Отрицательное оно число или положительное (или нулевое), чётное
+или нечётное
+ */
 import java.util.Scanner;
 
 public class DescriptionOfNumber {

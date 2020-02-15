@@ -1,5 +1,7 @@
 package Lesson1;
-
+/*
+3. Написать программу для вывода на экран таблицы умножения.
+ */
 import java.sql.SQLOutput;
 
 public class MultiplicationTable {

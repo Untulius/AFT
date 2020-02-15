@@ -1,5 +1,7 @@
 package Lesson1;
-
+/*
+1. Написать программу для поиска минимального из двух чисел.
+ */
 import java.util.Scanner;
 
 public class Minimal {

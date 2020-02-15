@@ -1,5 +1,8 @@
 package Lesson1;
-
+/*
+4. Написать программу, которая выводит арифметическую или
+геометрическую прогрессию для N чисел
+ */
 import java.util.Scanner;
 
 public class Progressions {
@@ -27,6 +30,6 @@ public class Progressions {
             System.out.print(a1*d + " ");
             a1=a1*d;
         }
-
+        scanner.close();
     }
 }
