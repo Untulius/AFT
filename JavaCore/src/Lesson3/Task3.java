@@ -8,18 +8,37 @@ import java.util.Scanner;
  */
 public class Task3 {
     public static void main(String[] args) {
-        int N, tmp;
+        int N, tmp=0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число членов последовательности N: ");
         N = scanner.nextInt();
-        tmp = 0;
-        System.out.println("Последовательность Фибоначчи: " + fib(N));
+        System.out.println("Последовательность Фибоначчи: ");
+        if (N>=0){
+            for (int i = 0; i < N ; i++) {
+                System.out.print(fib(i) + " ");
+            }
+        } else{
+            for (int i = 0; i > N ; i--) {
+                System.out.print(fib(i) + " ");
+            }
+        }
+
     }
 
-    private static int fib(int N, int tmp)
+    private static int fib(int N)
     {
-        if (tmp<N){
-
+        if (N==0){
+            return 0;
         }
+        if (N==1){
+            return 1;
+        } else
+            if (N>0){
+                return fib(N-1) + fib(N-2);
+            }
+            else {
+                return fib(N+2) - fib(N+1);
+            }
+
     }
 }

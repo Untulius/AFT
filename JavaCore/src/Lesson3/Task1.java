@@ -16,7 +16,7 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        System.out.println("Введите размерноесть массива");
+        System.out.println("Введите размерность массива");
         n = scanner.nextInt();
         arr = new int[n];
         for (int i = 0; i < arr.length; i++) {
