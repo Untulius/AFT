@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[] args) {
         int[][] arr;
-        int N, sum=0, sum1=0;
+        int N, sum = 0,tmp = 0;
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
@@ -34,11 +34,10 @@ public class Task2 {
         for (int i = 0; i < arr.length; i++) {
             sum+=arr[i][i];
         }
+
         for (int i = arr.length-1; i >= 0; i--) {
-            for (int j = 0; j < arr.length; j++) {
-                sum1+=arr[i][j];
-            }
+            sum+=arr[i][tmp++];
         }
-        System.out.println("Сумма диагоналей равна " + sum1);
+        System.out.println("Сумма диагоналей равна " + sum);
     }
 }
