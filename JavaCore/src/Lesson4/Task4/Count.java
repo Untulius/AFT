@@ -4,7 +4,7 @@ package Lesson4.Task4;
 создаваемых объектов. Написать метод для получения информации о
 количестве.
  */
-public class Count {
+public final class Count {
     private static int count;
     Count(){
         count++;

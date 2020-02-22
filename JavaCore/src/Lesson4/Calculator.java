@@ -7,7 +7,7 @@ import java.util.Scanner;
 для операций вычитания, сложения, умножения, деления и взятия процента от
 числа. Класс должен работать как с целыми числами, так и с дробями.
  */
-public class Calculator {
+public final class Calculator {
     public static void main(String[] args) {
         double a, b;
         String s;
