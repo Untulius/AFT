@@ -9,7 +9,8 @@ import java.util.Scanner;
  */
 public final class Calculator {
     public static void main(String[] args) {
-        double a, b;
+        double a;
+        double b;
         String s = new String();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число a:");

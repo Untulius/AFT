@@ -12,7 +12,9 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[] args) {
         int[][] arr;
-        int n, sum = 0, tmp = 0;
+        int n;
+        int sum = 0;
+        int tmp = 0;
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 

@@ -11,8 +11,10 @@ import java.util.Scanner;
  */
 public final class Task1 {
     public static void main(String[] args) {
-        int[] arr, arr1;
-        int n, count = 0;
+        int[] arr;
+        int[] arr1;
+        int n;
+        int count = 0;
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
