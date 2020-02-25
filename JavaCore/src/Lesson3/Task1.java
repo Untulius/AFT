@@ -12,7 +12,7 @@ import java.util.Scanner;
 public final class Task1 {
     public static void main(String[] args) {
         int[] arr, arr1;
-        int n, count=0;
+        int n, count = 0;
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
@@ -29,7 +29,7 @@ public final class Task1 {
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = i; j < arr.length; j++) {
-                if (arr[i]>arr[j]){
+                if (arr[i] > arr[j]) {
                     int tmp = arr[j];
                     arr[j] = arr[i];
                     arr[i] = tmp;
@@ -42,8 +42,8 @@ public final class Task1 {
 
         count = 0;
         for (int i = 0; i < arr1.length; i++) {
-            for (int j = i+1; j < arr1.length; j++) {
-                if (arr1[i]>arr1[j]){
+            for (int j = i + 1; j < arr1.length; j++) {
+                if (arr1[i] > arr1[j]) {
                     int tmp = arr1[j];
                     arr1[j] = arr1[i];
                     arr1[i] = tmp;

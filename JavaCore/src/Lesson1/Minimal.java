@@ -2,6 +2,7 @@ package Lesson1;
 /*
 1. Написать программу для поиска минимального из двух чисел.
  */
+
 import java.util.Scanner;
 
 public class Minimal {
@@ -16,16 +17,16 @@ public class Minimal {
         System.out.println("Введите значение второго числа: b =");
         b = scanner.nextInt();
 
-        if (min(a, b)==0) System.out.println("Числа равны");
-            else System.out.println("Минимальное число равно " + min(a, b));
+        if (min(a, b) == 0) System.out.println("Числа равны");
+        else System.out.println("Минимальное число равно " + min(a, b));
 
         scanner.close();
     }
 
-    public static int min(int a, int b){
+    public static int min(int a, int b) {
         if (a < b) return a;
-            else if (b < a) return b;
-                else return 0;
+        else if (b < a) return b;
+        else return 0;
     }
 
 }

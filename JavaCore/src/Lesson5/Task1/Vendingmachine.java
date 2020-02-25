@@ -1,4 +1,4 @@
-package Lesson2;
+package Lesson5.Task1;
 /*
 Реализовать программу «Вендинговый автомат», которая позволит:
  Посмотреть меню напитков
@@ -10,7 +10,11 @@ package Lesson2;
  Пользователь выбрал несуществующий номер напитка
 У напитка должна быть цена и название.
 
+1. Переписать проект с урока (вендинговый автомат) используя конструктор,
+перечисления и взаимодействие с пользователем.
  */
+
+import Lesson2.Drink;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -20,7 +24,7 @@ public class Vendingmachine {
         ArrayList<Drink> drinks = new ArrayList<>();
         int acc;
         int n;
-
+        boolean b;
         Scanner scanner = new Scanner(System.in);
 
         drinks.add(new Drink("Кока-Кола", 91));
@@ -32,7 +36,7 @@ public class Vendingmachine {
         System.out.println("Меню напитков:");
         System.out.println("Наименование   Цена");
         for (int i = 0; i < drinks.size(); i++) {
-            System.out.print(i + 1 + ". " + drinks.get(i).getName() + "\t\t" + drinks.get(i).getPrice());
+            System.out.print(i + 1 + ". " + drinks.get(i).getName() + "      " + drinks.get(i).getPrice());
             System.out.println();
         }
         System.out.println("Внесите деньги");
@@ -41,13 +45,13 @@ public class Vendingmachine {
             System.out.println("Внесите деньги");
             acc = scanner.nextInt();
         }
-        boolean b;
+
         do {
             b = false;
             System.out.println("На счете " + acc + " рублей. Введите номер напитка: ");
             System.out.println("Наименование   Цена");
             for (int i = 0; i < drinks.size(); i++) {
-                System.out.print(i + 1 + ". " + drinks.get(i).getName() + "\t\t" + drinks.get(i).getPrice());
+                System.out.print(i + 1 + ". " + drinks.get(i).getName() + "      " + drinks.get(i).getPrice());
                 System.out.println();
             }
             n = scanner.nextInt();

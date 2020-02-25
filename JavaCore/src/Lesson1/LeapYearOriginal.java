@@ -18,9 +18,9 @@ public class LeapYearOriginal {
         y = scanner.nextInt();
 
         if (y % 400 == 0) System.out.println("Год " + y + " - високосный");
-            else if (y % 100 == 0) System.out.println("Год " + y + " - невисокосный");
-                else if (y % 4 == 0) System.out.println("Год " + y + " - високосный");
-                    else System.out.println("Год " + y + " - невисокосный");
+        else if (y % 100 == 0) System.out.println("Год " + y + " - невисокосный");
+        else if (y % 4 == 0) System.out.println("Год " + y + " - високосный");
+        else System.out.println("Год " + y + " - невисокосный");
 
         scanner.close();
     }

@@ -17,7 +17,8 @@ public class Task1 {
         change(s);
         scanner.close();
     }
-    public static void change(String s){
+
+    public static void change(String s) {
         String s1;
         s1 = s.replaceAll("бяка", "вырезано цензурой");
         System.out.println("Измененная строка: " + s1);

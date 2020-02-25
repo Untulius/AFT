@@ -10,51 +10,55 @@ import java.util.Scanner;
 public final class Calculator {
     public static void main(String[] args) {
         double a, b;
-        String s;
+        String s = new String();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число a:");
         a = scanner.nextDouble();
         System.out.println("Введите число b:");
         b = scanner.nextDouble();
         s = scanner.nextLine();
-        while (!(s.equals("+")||s.equals("-")||s.equals("*")||s.equals("/")||s.equals("%"))) {
+        while (!(s.equals("+") || s.equals("-") || s.equals("*") || s.equals("/") || s.equals("%"))) {
             System.out.println("Введите одну из операций: +, -, *, /, %");
             s = scanner.nextLine();
         }
-        switch (s){
+        switch (s) {
             case ("+"):
-                add(a,b);
+                add(a, b);
                 break;
             case ("-"):
-                subtract(a,b);
+                subtract(a, b);
                 break;
             case ("*"):
-                multiply(a,b);
+                multiply(a, b);
                 break;
             case ("/"):
-                divide(a,b);
+                divide(a, b);
                 break;
             case ("%"):
-                percent(a,b);
+                percent(a, b);
                 break;
         }
         scanner.close();
     }
 
 
-    public static void add(Double a, Double b){
-        System.out.println(a + " + " + b + " = " + (a+b));
+    public static void add(Double a, Double b) {
+        System.out.println(a + " + " + b + " = " + (a + b));
     }
-    public static void subtract(Double a, Double b){
-        System.out.println(a + " - " + b + " = " + (a-b));
+
+    public static void subtract(Double a, Double b) {
+        System.out.println(a + " - " + b + " = " + (a - b));
     }
-    public static void multiply(Double a, Double b){
-        System.out.println(a + " * " + b + " = " + (a*b));
+
+    public static void multiply(Double a, Double b) {
+        System.out.println(a + " * " + b + " = " + (a * b));
     }
-    public static void divide(Double a, Double b){
-        System.out.println(a + " / " + b + " = " + (a/b));
+
+    public static void divide(Double a, Double b) {
+        System.out.println(a + " / " + b + " = " + (a / b));
     }
-    public static void percent(Double percent, Double b){
-        System.out.println(percent + "% от числа " + b + " = " + (b*percent/100));
+
+    public static void percent(Double percent, Double b) {
+        System.out.println(percent + "% от числа " + b + " = " + (b * percent / 100));
     }
 }
