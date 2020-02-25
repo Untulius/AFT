@@ -10,8 +10,10 @@ public class Main {
         Cat cat = new Cat("Кошак");
         Dog dog = new Dog("Белый Бим");
         Fish fish1 = new Fish("Карась");
+        Duck duck1 = new Duck("Donald");
         cat.getName();
         fish1.getName();
         dog.getName();
+        duck1.getName();
     }
 }
