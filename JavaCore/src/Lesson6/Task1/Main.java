@@ -1,5 +1,7 @@
 package Lesson6.Task1;
 
+import java.util.Arrays;
+
 /*
 1. Написать класс PersonSuperComparator, который имплементит Comparator,
 но умеет сравнивать по двум параметрам: возраст и имя. Класс Person
@@ -7,16 +9,28 @@ package Lesson6.Task1;
  */
 public class Main {
     public static void main(String[] args) {
-        Person person1 = new Person("Иван", 19);
-        Person person2 = new Person("Алексей", 21);
-        Person person3 = new Person("Коля", 23);
-        Person person4 = new Person("Иван", 21);
-        Person person5 = new Person("Иван", 19);
+        Person[] persons = new Person[5];
+        persons[0] = new Person("Иван", 19);
+        persons[1] = new Person("Алексей", 21);
+        persons[2] = new Person("Коля", 23);
+        persons[3] = new Person("Алексей", 16);
+        persons[4] = new Person("Иван", 19);
 
-        PersonSuperComparator psc = new PersonSuperComparator();
-        System.out.println(psc.compare(person1, person3));
-        System.out.println(psc.compare(person2, person4));
-        System.out.println(psc.compare(person1, person5));
-        System.out.println(psc.compare(person1, person4));
+        System.out.println("----------без сортировки");
+        for (Person person : persons) {
+            System.out.println(person.toString());
+        }
+
+        System.out.println("----------сортировка по имени");
+        Arrays.sort(persons, new PersonSuperComparator(true));
+        for (Person person : persons) {
+            System.out.println(person.toString());
+        }
+        System.out.println("----------сортировка по возрасту");
+        Arrays.sort(persons, new PersonSuperComparator(false));
+        for (Person person : persons) {
+            System.out.println(person.toString());
+        }
+
     }
 }
