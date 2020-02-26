@@ -13,10 +13,6 @@ package Lesson5.Task1;
 1. Переписать проект с урока (вендинговый автомат) используя конструктор,
 перечисления и взаимодействие с пользователем.
  */
-
-import Lesson2.Drink;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Vendingmachine {
