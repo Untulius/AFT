@@ -11,6 +11,7 @@ package Lesson2;
 У напитка должна быть цена и название.
 
  */
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class Vendingmachine {
         ArrayList<Drink> drinks = new ArrayList<>();
         int acc;
         int n;
-        boolean b;
+
         Scanner scanner = new Scanner(System.in);
 
         drinks.add(new Drink("Кока-Кола", 91));
@@ -30,43 +31,43 @@ public class Vendingmachine {
 
         System.out.println("Меню напитков:");
         System.out.println("Наименование   Цена");
-        for (int i = 0; i<drinks.size(); i++) {
-            System.out.print(i+1 + ". " + drinks.get(i).getName() + "      " + drinks.get(i).getPrice());
+        for (int i = 0; i < drinks.size(); i++) {
+            System.out.print(i + 1 + ". " + drinks.get(i).getName() + "\t\t" + drinks.get(i).getPrice());
             System.out.println();
         }
         System.out.println("Внесите деньги");
         acc = scanner.nextInt();
-        while (acc<=0){
+        while (acc <= 0) {
             System.out.println("Внесите деньги");
             acc = scanner.nextInt();
         }
-
+        boolean b;
         do {
-            b=false;
+            b = false;
             System.out.println("На счете " + acc + " рублей. Введите номер напитка: ");
             System.out.println("Наименование   Цена");
-            for (int i = 0; i<drinks.size(); i++) {
-                System.out.print(i+1 + ". " + drinks.get(i).getName() + "      " + drinks.get(i).getPrice());
+            for (int i = 0; i < drinks.size(); i++) {
+                System.out.print(i + 1 + ". " + drinks.get(i).getName() + "\t\t" + drinks.get(i).getPrice());
                 System.out.println();
             }
             n = scanner.nextInt();
-            while (n<=0 || n>drinks.size()){
+            while (n <= 0 || n > drinks.size()) {
                 System.out.println("Вы ввели несуществующий номер напитка. Введите корректный номер: ");
                 n = scanner.nextInt();
             }
-            while (drinks.get(n-1).getPrice()>acc){
-                int num ;
-                int razn = drinks.get(n-1).getPrice()-acc;
+            while (drinks.get(n - 1).getPrice() > acc) {
+                int num;
+                int razn = drinks.get(n - 1).getPrice() - acc;
                 System.out.println("На счете недостаточно средств, внесите ещё " + razn + " рублей или введите 0 для возврата в меню");
                 num = scanner.nextInt();
-                if (num == 0 ){
-                    b=true;
+                if (num == 0) {
+                    b = true;
                     break;
                 }
                 acc += num;
             }
         } while (b);
-        System.out.println("Возьмите ваш напиток " + drinks.get(n-1).getName() + " и сдачу " + (acc-drinks.get(n-1).getPrice()) + " рублей");
+        System.out.println("Возьмите ваш напиток " + drinks.get(n - 1).getName() + " и сдачу " + (acc - drinks.get(n - 1).getPrice()) + " рублей");
         scanner.close();
     }
 }

@@ -12,13 +12,15 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[] args) {
         int[][] arr;
-        int N, sum = 0,tmp = 0;
+        int n;
+        int sum = 0;
+        int tmp = 0;
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        System.out.println("Введите размерность массива N");
-        N = scanner.nextInt();
-        arr = new int[N][N];
+        System.out.println("Введите размерность массива n");
+        n = scanner.nextInt();
+        arr = new int[n][n];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 arr[i][j] = random.nextInt(10);
@@ -32,11 +34,11 @@ public class Task2 {
             System.out.println("");
         }
         for (int i = 0; i < arr.length; i++) {
-            sum+=arr[i][i];
+            sum += arr[i][i];
         }
 
-        for (int i = arr.length-1; i >= 0; i--) {
-            sum+=arr[i][tmp++];
+        for (int i = arr.length - 1; i >= 0; i--) {
+            sum += arr[i][tmp++];
         }
         System.out.println("Сумма диагоналей равна " + sum);
     }
