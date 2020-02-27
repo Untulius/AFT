@@ -1,6 +1,5 @@
 package Lesson6.Task2;
 
-import Lesson6.Task1.Person;
 
 public class Main {
     public static void main(String[] args) {
