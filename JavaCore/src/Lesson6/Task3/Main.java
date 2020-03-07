@@ -1,8 +1,6 @@
 package Lesson6.Task3;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /*
 3. public boolean isUnique(Map<String, String> map);
@@ -53,6 +51,7 @@ public class Main {
     }
 
     public boolean isUnique(Map<String, String> map) {
+        /*
         if (map.isEmpty()) {
             return true;
         }
@@ -70,6 +69,23 @@ public class Main {
                 isUnique = false;
             }
             wordCount = 0;
+        }
+        return isUnique;
+        */
+        if (map.isEmpty()) {
+            return true;
+        }
+        int wordCount;
+        boolean isUnique = true;
+        List<String> mylist = new ArrayList<>();
+        for (Map.Entry<String, String> entry : map.entrySet()){
+            mylist.add(entry.getValue());
+        }
+        for (String list : mylist) {
+            wordCount = Collections.frequency(mylist, list);
+            if (wordCount > 1) {
+                isUnique = false;
+            }
         }
         return isUnique;
     }
