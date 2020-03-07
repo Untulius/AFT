@@ -1,5 +1,6 @@
 package Lesson6.Task3;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -55,21 +56,21 @@ public class Main {
         if (map.isEmpty()) {
             return true;
         }
-        int count = 0;
-        boolean flag = true;
+        int wordCount = 0;
+        boolean isUnique = true;
         String surname;
         for (Map.Entry<String, String> entry : map.entrySet()) {
             surname = entry.getValue();
             for (Map.Entry<String, String> entry1 : map.entrySet()) {
                 if (surname.equals(entry1.getValue())) {
-                    count++;
+                    wordCount++;
                 }
             }
-            if (count > 1) {
-                flag = false;
+            if (wordCount > 1) {
+                isUnique = false;
             }
-            count = 0;
+            wordCount = 0;
         }
-        return flag;
+        return isUnique;
     }
 }

@@ -7,14 +7,14 @@ package Lesson4.Task4;
 количестве.
  */
 public final class Count {
-    private static int count;
+    private static int objectscount;
 
     public Count() {
-        count++;
-        System.out.println("Создан экземпляр класса Count #" + count);
+        objectscount++;
+        System.out.println("Создан экземпляр класса Count #" + objectscount);
     }
 
     public void getCount() {
-        System.out.println("Количество созданных экземпляров класса Count: " + count);
+        System.out.println("Количество созданных экземпляров класса Count: " + objectscount);
     }
 }

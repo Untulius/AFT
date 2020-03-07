@@ -9,18 +9,18 @@ import java.util.Scanner;
  */
 public class Task1 {
     public static void main(String[] args) {
-        String s;
+        String stroka;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите строку:");
-        s = scanner.nextLine();
-        System.out.println("Введенная строка: " + s);
-        change(s);
+        stroka = scanner.nextLine();
+        System.out.println("Введенная строка: " + stroka);
+        change(stroka);
         scanner.close();
     }
 
-    public static void change(String s) {
-        String s1;
-        s1 = s.replaceAll("бяка", "вырезано цензурой");
-        System.out.println("Измененная строка: " + s1);
+    public static void change(String stroka) {
+        String newstroka;
+        newstroka = stroka.replaceAll("бяка", "вырезано цензурой");
+        System.out.println("Измененная строка: " + newstroka);
     }
 }
