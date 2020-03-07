@@ -81,8 +81,8 @@ public class Main {
         for (Map.Entry<String, String> entry : map.entrySet()){
             mylist.add(entry.getValue());
         }
-        for (String list : mylist) {
-            wordCount = Collections.frequency(mylist, list);
+        for (String word : mylist) {
+            wordCount = Collections.frequency(mylist, word);
             if (wordCount > 1) {
                 isUnique = false;
             }
